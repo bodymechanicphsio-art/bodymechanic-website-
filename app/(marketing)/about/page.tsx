@@ -40,7 +40,7 @@ export default function AboutPage() {
           <AnimateOnScroll>
             <SectionLabel label="Our Story" />
             <h1 className="section-heading mb-5">
-              physiotherapy clinic in Lahore{" "}
+              Physiotherapy clinic in Lahore{" "}
             
             </h1>
             <p className="section-subtext font-sans">
