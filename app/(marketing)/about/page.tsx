@@ -7,10 +7,18 @@ import FaqAccordionList from "@/components/ui/FaqAccordionList";
 import AboutJourney from "@/components/sections/AboutJourney";
 import { createPageMetadata } from "@/lib/seo";
 import { ASSETS } from "@/lib/assets";
-import { TEAM_MEMBERS, MISSION_VALUES, ACCREDITATIONS, ABOUT_FAQ_ITEMS } from "@/lib/constants";
+import {
+  TEAM_MEMBERS,
+  MISSION_VALUES,
+  ACCREDITATIONS,
+  ABOUT_FAQ_ITEMS,
+} from "@/lib/constants";
 import { Target, Lightbulb, Trophy, type LucideIcon } from "lucide-react";
 
-const MISSION_ICONS: Record<(typeof MISSION_VALUES)[number]["icon"], LucideIcon> = {
+const MISSION_ICONS: Record<
+  (typeof MISSION_VALUES)[number]["icon"],
+  LucideIcon
+> = {
   target: Target,
   lightbulb: Lightbulb,
   trophy: Trophy,
@@ -36,38 +44,44 @@ export default function AboutPage() {
               <span className="gradient-text">Evidence & Empathy</span>
             </h1>
             <p className="section-subtext font-sans">
-              Body Mechanic Physiotherapy Clinic opened its doors in Lahore in 2021, founded by
-              Dr. Saima Naseem PT, a sports physiotherapist whose earlier career took her from the
-              Tennis Federation of Pakistan to the Pakistan Cricket Board and international ITF
-              events. She built the clinic around one idea: bring the same athlete-grade
-              physiotherapy that keeps professional players match-fit to everyday patients across
-              Lahore.
+              Body Mechanic Physiotherapy Clinic opened its doors in Lahore in
+              2021, founded by Dr. Saima Naseem PT, a sports physiotherapist
+              whose earlier career took her from the Tennis Federation of
+              Pakistan to the Pakistan Cricket Board and international ITF
+              events. She built the clinic around one idea: bring the same
+              athlete-grade physiotherapy that keeps professional players
+              match-fit to everyday patients across Lahore.
             </p>
             <p className="mt-4 font-sans text-[1.0625rem] leading-relaxed text-text-2 sm:text-[1.125rem]">
-              From that first treatment room, Body Mechanic has grown into a full DPT-qualified
-              team, structured internship programmes in partnership with Riphah International
-              University, and regular professional workshops across Lahore and Islamabad. Along the
-              way we&apos;ve been recognised with the LAPS Award (Lahore Academy of Physical
-              Sciences, 2023) and a Shield of Appreciation from the MIS Institute (2024) for our
-              contribution to physiotherapy education, and, now four years on, the clinic is
+              From that first treatment room, Body Mechanic has grown into a
+              full DPT-qualified team, structured internship programmes in
+              partnership with Riphah International University, and regular
+              professional workshops across Lahore and Islamabad. Along the way
+              we&apos;ve been recognised with the LAPS Award (2023) and a Shield
+              of Appreciation from the MIS Institute (2024) for our contribution
+              to physiotherapy education, and, now four years on, the clinic is
               still growing.
             </p>
             <p className="mt-4 font-sans text-[1.0625rem] leading-relaxed text-text-2 sm:text-[1.125rem]">
-              Today, Body Mechanic is one of Lahore&apos;s most trusted physiotherapy destinations
-              for sports rehabilitation, chronic pain relief, and long-term wellness care. The
-              values from day one still hold: evidence-based assessment, honest treatment plans
-              with clear timelines, and warm, patient-first care, no referral needed to start.
+              Today, Body Mechanic is one of Lahore&apos;s most trusted
+              physiotherapy destinations for sports rehabilitation, chronic pain
+              relief, and long-term wellness care. The values from day one still
+              hold: evidence-based assessment, honest treatment plans with clear
+              timelines, and warm, patient-first care, no referral needed to
+              start.
             </p>
           </AnimateOnScroll>
 
           <AnimateOnScroll delay={0.1}>
-            <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl bg-bg-section shadow-[0_16px_40px_-12px_rgba(0,0,0,0.12)] lg:max-w-md">
+            <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-2xl bg-bg-section shadow-[0_16px_40px_-12px_rgba(0,0,0,0.12)] lg:max-w-md">
               <ClinicImage
                 src={ASSETS.clinic.aboutHero}
                 alt="Dr. Saima Naseem PT at Body Mechanic Physiotherapy Clinic in Lahore"
-                fill
+                width={585}
+                height={1024}
                 sizes="(max-width: 1024px) 90vw, 28rem"
-                className="object-contain object-center"
+                objectFit="contain"
+                className="h-auto w-full"
                 priority
               />
             </div>
@@ -84,7 +98,12 @@ export default function AboutPage() {
               <AnimateOnScroll key={item.title} delay={i * 0.1}>
                 <div className="card-light p-7 md:p-8 h-full text-center">
                   <div className="w-12 h-12 rounded-xl bg-brand-pink-light border border-border-pink flex items-center justify-center mx-auto mb-4">
-                    <Icon size={22} strokeWidth={2} className="text-brand-pink" aria-hidden="true" />
+                    <Icon
+                      size={22}
+                      strokeWidth={2}
+                      className="text-brand-pink"
+                      aria-hidden="true"
+                    />
                   </div>
                   <h3 className="font-bold text-base sm:text-lg mb-3 font-display text-brand-pink">
                     {item.title}
@@ -120,7 +139,11 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 items-start justify-items-center gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {TEAM_MEMBERS.filter((m) => !m.featured).map((member, i) => (
-            <AnimateOnScroll key={member.name} delay={i * 0.08} className="w-full max-w-sm">
+            <AnimateOnScroll
+              key={member.name}
+              delay={i * 0.08}
+              className="w-full max-w-sm"
+            >
               <TeamMemberCard member={member} />
             </AnimateOnScroll>
           ))}

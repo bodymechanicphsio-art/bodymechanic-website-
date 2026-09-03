@@ -137,7 +137,7 @@ export const JOURNEY_MILESTONES: JourneyMilestone[] = [
       },
       {
         src: "/images/journey/2023-laps.jpg",
-        alt: "Dr. Saima Naseem receiving the LAPS Award from the Lahore Academy of Physical Sciences",
+        alt: "Dr. Saima Naseem receiving the LAPS Award",
       },
     ],
   },
