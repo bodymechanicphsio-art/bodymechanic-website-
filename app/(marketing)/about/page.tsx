@@ -40,8 +40,8 @@ export default function AboutPage() {
           <AnimateOnScroll>
             <SectionLabel label="Our Story" />
             <h1 className="section-heading mb-5">
-              Physiotherapy in Lahore Built On{" "}
-              <span className="gradient-text">Evidence & Empathy</span>
+              physiotherapy clinic in Lahore{" "}
+            
             </h1>
             <p className="section-subtext font-sans">
               Body Mechanic Physiotherapy Clinic opened its doors in Lahore in
